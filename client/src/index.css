@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+
+
+.heading-wrapper{
+    width: 0%;
+    white-space: nowrap;
+    animation: showIn 1s ease-in-out forwards;
+    h1{
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards;
+        
+    }
+}
+
+.heading-desc{
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.heading-wrapper {
+    width: 700px; /* or whatever */
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    opacity: 1; /* Default: visible */
+}
+
+.heading-wrapper.hidden {
+    opacity: 0; /* When out of view: hide */
+}
+
+@keyframes showIn {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 700px;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
